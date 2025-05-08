@@ -1,0 +1,428 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+}
+
+
+.main{
+    height:100%;
+    width:100%;
+    position:relative; /* this is good practice because when we want to use absolute position all children element will 
+    position next to the parent div and not it's direct ancestors */
+
+}
+
+.nav{
+    height: 100px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5vw;
+     /* padding is always top, bottom and right left */
+}
+
+.nav img{
+    height:5vw;
+    width:7vw;
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 4vw; /* the gap will remain 4% of viewpoer width throughout the shrinking of the screen on the main axis */
+
+}
+
+.nav  h4{
+    font-size:1vw;
+}
+
+.nav i{
+    font-size:1.6vw;
+    display: none;
+}
+
+.content{
+    height:calc(100% - 100px); /* used to calculate arithmetics and remaining space because the navbar(.nav) is 100px */
+    width:100%;
+    display: flex;
+    position:relative; /* we haven't used it yet, just for case */
+}
+
+.left{
+    width: 55%;
+    padding:4vw 5vw;
+    height:100%;
+}
+
+.nav button{
+    font-size:1vw;
+    padding: 0.8vw 1.2vw;
+    border: none;
+    background-color: #91b3fa;
+    color:white;
+    border-radius:5px; /* pixels are fixed withs for all screens */
+}
+
+.left h1{
+    font-size:4.2vw;
+    line-height: 4.4vw;
+}
+
+.left h1 span{
+    color:#6776f6;
+}
+
+.left p{
+    font-size:1.2vw;
+    font-weight: 600;
+    color:#666;
+    width: 80%;
+    margin-top:1.5vw;
+    margin-bottom:3vw;
+}
+
+
+
+
+/*#lottie{
+    display: block;
+    border:2px solid black;
+    height: 100%;
+    width: 100%;
+    position:absolute; 
+    z-index:1;
+    background-color: #66666660;
+}
+
+#lottie button{
+    font-size:1.2vw;
+    padding: 0.5vw 1vw;
+    border: none;
+    background-color: #f90000f7;
+    color:white;
+    border-radius:2px; 
+    position:relative;
+    left:60vw;
+    top:10vw; 
+}
+
+*/
+
+
+.content button{
+    font-size:1.2vw;
+    padding: 1vw 2vw;
+    border: none;
+    background-color: #6776f6;
+    color:white;
+    border-radius:5px; /* pixels are fixed withs for all screens */
+}
+
+.right{
+    height:100%;
+    width:45%;
+    box-sizing: border-box;
+}
+
+.right img{
+    height:100%;
+    width:100%;
+}
+
+
+.footer{
+    box-sizing: border-box;
+    padding: 0 4vw;
+    justify-content: space-between;
+    display: flex;
+    width:100%;
+    height:auto;
+}
+
+.trademark{
+    display: flex;
+    align-items: center;
+}
+
+
+.footer h1{
+    font-size:1.5vw;
+    font-family:inherit;
+}
+
+.footer h2{
+    font-family: inherit;
+}
+
+.footer li{
+    font-size:1.2vw;
+    font-weight:100;
+    list-style: none;
+    padding:0.5vw;
+    margin-bottom:0.5vw;
+    border-bottom: 2px solid lightseagreen;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.mobile{
+    display: none;
+    flex-direction: column;
+    /*transition: opacity 1.5s ease-in-out;
+    opacity:0;*/
+    background-color:rgba(54, 94, 150, 0.812);
+    padding:2vw 3vw;
+    justify-content: center;
+    width:100%;
+}
+
+
+.mobile h4 div{
+    display:none;
+}
+
+
+
+
+.mobile h4{
+    font-size:5vw;
+    padding:2vw 2vw;
+    font-weight: thin;
+    color:white;
+}
+
+
+
+.mobile button{
+    font-size:4vw;
+    padding: 1vw 2vw;
+    margin-top:2vw;
+    border: none;
+    background-color: #6776f6;
+    color:white;
+    border-radius:5px;
+}
+
+.dropdown{
+    width:100%;
+}
+
+.mobile h4 ul{
+    list-style-type: none;
+    width: 100%;
+    /*background-color: rgba(56, 180, 218, 0.603); */
+}
+
+.mobile h4 ul li{
+    font-size:4vw;
+    padding:2vw 2vw;
+    border-bottom:1px solid #dadada;
+
+}
+/*.mobile h4 ul li:hover{
+    background-color: #dadada;
+}*/
+
+/*.moveup{
+    animation: moveup 1.5s ease-in-out;
+}
+
+
+@keyframes moveup {
+    from{
+        height:40%;
+    }
+    to{
+        height:0%;
+    }
+    
+}
+
+.movedown{
+    animation: movedown 1.5s ease-in-out;
+}
+
+@keyframes movedown {
+    from{
+        height:0%;
+    }
+    to{
+        height:40%;
+    }
+    
+}
+*/
+
+#popup{
+    display: none;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.586);
+    z-index:1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fe7b71;
+    width:50vw;
+    height:50vh;
+}
+
+.message h2{
+    color:black;
+    font-size:2vw;
+    margin-bottom:1vw;
+    color:hsl(hue, saturation, lightness)
+}
+
+.input > input{
+    width:100%;
+    padding: 1vw 1.5vw;
+    font-size:120%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:1.5vw;
+    margin-bottom:1.5vw;
+}
+
+.input > button{
+    padding : 0.5vw 1vw;
+    width: auto;
+    border:none;
+    border-radius:0.5vw;
+    background-color: indigo;
+    color:white;
+}
+.message abbr{
+    color:green;
+}
+
+#exit{
+    position:absolute;
+    color:white;
+    font-size:1.5vw;
+    top:0;
+    left:0;
+    padding:1vw 2vw;
+    background-color: red;
+    border:none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 0;
+}
+
+@media (max-width:800px) {
+    .message{
+        width:70vw;
+        height:70vh;
+    }
+
+    .message h2{
+        font-size:4vw;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .nav{
+        height:10vh;
+        padding: 0 5vw;
+    }
+
+   
+    .nav img{
+        height:10vw;
+        width:10vw;
+    }
+
+    .nav button{
+        display: none;
+    }
+
+    .content{
+        flex-direction: column;
+        height:auto;
+    }
+    .left{
+        width:100%;
+    }
+    .left h1{
+        font-size:10vw;
+        line-height:11vw;
+    }
+
+    .left p{
+        font-size:4vw;
+        width:90%;
+        margin-top:5vw;
+        margin-bottom:6vw;
+    }
+
+    .left button{
+        font-size:4vw;
+        padding:4vw 4vw;
+        border-radius:3px;
+        font-weight: 600px;
+    }
+
+    .right{
+        width:100%;
+    }
+
+    .nav h2{
+        font-size:6vw;
+
+    }
+
+    .nav h4{
+        display: none;
+        
+    }
+
+    .nav i {
+        display: block;
+        font-size:6vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+        gap:2vw;
+
+    }
+
+    .footer h1{
+        font-size:4vw;
+    }
+
+
+    .footer h2{
+        font-size:5vw;
+    }
+
+    .footer ul li{
+        font-size:3vw;
+    }
+
+    
+    
+}
